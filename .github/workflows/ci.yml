@@ -16,7 +16,7 @@ steps: # tasks to run in order
 uses: actions/setup-node@v4 # install Node
 with:
 node-version: ${{ matrix.node-version }}
-cache: 'npm.cmd' # reuse packages
+cache: 'npm' # reuse packages
 - run: npm ci # install packages (ci = clean install)
 - run: npm run lint # check code style
 - run: npm test # run tests
